@@ -1,4 +1,4 @@
-package com.github.yuk1ty
+package com.github.yuk1ty.eff
 
 sealed trait View[F[_], A, B]
 

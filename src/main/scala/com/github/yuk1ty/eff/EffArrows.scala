@@ -1,8 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Eff.{Impure, Pure}
-import com.github.yuk1ty.EffArrows.{Leaf, Node}
-import com.github.yuk1ty.EffView.{Cons, One}
+package com.github.yuk1ty.eff
 
 sealed trait EffArrows[F[_], A, B] {
 

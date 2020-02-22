@@ -1,7 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Arrows.Leaf
-import com.github.yuk1ty.Freer.{Impure, Pure}
+package com.github.yuk1ty.eff
 
 sealed trait Freer[F[_], A] {
 

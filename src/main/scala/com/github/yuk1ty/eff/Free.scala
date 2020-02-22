@@ -1,6 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Free.{Impure, Pure}
+package com.github.yuk1ty.eff
 
 sealed trait Free[F[_], A] {
 

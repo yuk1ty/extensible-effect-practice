@@ -1,8 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Eff.Pure
-import com.github.yuk1ty.Eff.Impure
-import com.github.yuk1ty.EffArrows.Leaf
+package com.github.yuk1ty.eff
 
 sealed trait Eff[R[_], A] {
 
@@ -21,4 +17,8 @@ object Eff {
 
   def apply[R[_], F[_], A](fa: F[A])(implicit F: Member[F, R]): Eff[R, A] =
     Impure(F.inject(fa), Leaf((x: A) => Pure(x)))
+
+  def run[A](eff: Eff[Void, A]): A = eff match {
+    case Pure(a) => a
+  }
 }

@@ -1,6 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Union.{:+:, Inl, Inr}
+package com.github.yuk1ty.eff
 
 trait Member[F[_], G[_]] {
   def inject[A](f: F[A]): G[A]

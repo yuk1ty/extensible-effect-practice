@@ -1,8 +1,4 @@
-package com.github.yuk1ty
-
-import com.github.yuk1ty.Arrows.{Leaf, Node}
-import com.github.yuk1ty.Freer.{Impure, Pure}
-import com.github.yuk1ty.View.{Cons, One}
+package com.github.yuk1ty.eff
 
 sealed trait Arrows[F[_], A, B] {
 
